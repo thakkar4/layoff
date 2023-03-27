@@ -1,5 +1,6 @@
 package layoff;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,7 +17,6 @@ public class SpiceJet {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		driver.manage().window().maximize();
-
 		/* .... Static Dropdown.... */
 
 		/*
