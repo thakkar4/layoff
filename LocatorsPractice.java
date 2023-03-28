@@ -20,7 +20,13 @@ public class LocatorsPractice {
 		driver.findElement(By.className("reset-pwd-btn")).click();
 		System.out.println(driver.findElement(By.className("infoMsg")).getText());
 		
-		driver.findElement(By.linkText("Forgot your password?")).click();
+		driver.findElement(By.xpath("//div[@class = 'forgot-pwd-btn-conainer']/button[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("#inputUsername")).sendKeys("rahul");
+		driver.findElement(By.cssSelector("input[type*='Pass']")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.id("chkboxOne")).click();
+		//driver.findElement(By.xpath("//button[@class = 'submit signInBtn']")).click();
+		driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
 	}
 
 }
