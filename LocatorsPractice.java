@@ -28,5 +28,5 @@ public class LocatorsPractice {
 		//driver.findElement(By.xpath("//button[@class = 'submit signInBtn']")).click();
 		driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
 	}
-
+	
 }
