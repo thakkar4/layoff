@@ -17,7 +17,7 @@ public class GreenKart {
         List<WebElement> productlist = driver.findElements(By.cssSelector("h4.product-name"));
         for(WebElement product : productlist) 
         {
-        	if(product.getText().startsWith("Cucumber "))
+        	if(product.getText().startsWith("Cucumber"))
         	{
         		System.out.println(product);
         	}

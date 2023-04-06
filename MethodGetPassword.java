@@ -16,8 +16,9 @@ public class MethodGetPassword {
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("#inputUsername")).sendKeys(name);
 		driver.findElement(By.cssSelector("input[type*='Pass']")).sendKeys(password);
-		driver.findElement(By.className("signInBtn")).click();
-		
+		Thread.sleep(2000);
+		//driver.findElement(By.className("signInBtn")).click();
+		driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
 	/*	Thread.sleep(2000);
 		System.out.println(driver.findElement(By.tagName("p")).getText());
 		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(),"You are successfully logged in.");
@@ -40,6 +41,7 @@ public static String getPassword(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.linkText("Forgot your password?")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.className("reset-pwd-btn")).click();
+		Thread.sleep(2000);
 		String passwordText = driver.findElement(By.className("infoMsg")).getText();
 		String[] passwordArray = passwordText.split("'");
 		String[] passwordArrayTwo = passwordArray[1].split("'");
